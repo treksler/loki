@@ -60,6 +60,7 @@ loki:
   revisionHistoryLimit: 10
   # -- The SecurityContext for Loki pods
   podSecurityContext:
+    fsGroupChangePolicy: "OnRootMismatch"
     fsGroup: 10001
     runAsGroup: 10001
     runAsNonRoot: true
